@@ -1,0 +1,10 @@
+# Overview
+This is a simple SQL injection challenge.
+
+The flag is load into the database, and we need to retrieve it.
+
+# Solution
+Just select the text from the database:
+```
+' and response_text like "bcactf%" -- -
+```
