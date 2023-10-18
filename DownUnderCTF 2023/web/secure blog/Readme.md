@@ -29,10 +29,11 @@ Then, I login to the panel with "/api/admin/login" and access grab the flag in t
 
 DUCTF{oRm_i_g0oF3d_uP_m1_r3lAsHunSh1p5!}
 
-{% note %}
-In this challenge, I also knew how nginx proxy works in some way.
+## Note
+In this challenge, I also figured out how nginx proxy works in some way.
 It seems that nginx will url-decode once, and then proxy the request to upstream server.
+
 Because we can actually use "/api%252F%252E%252E%252Fadmin" to access the admin page in Django, it will redirect us to "/admin/login/?next={triple url-encoded path}".
+
 But I don't know why, if I use that method to access "/api%252F%252E%252E%252Fadmin%252Flogin", it will return a 404.
 Might have to dig into this to find out what happend.
-{% endnote %}

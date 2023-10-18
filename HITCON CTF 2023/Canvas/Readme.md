@@ -38,11 +38,8 @@ We just need to create a canva to make it not crash, and `postMessage` again to 
 Again, this is kinda new to me, since we need to `postMessage` manualy to achieve XSS, we can't just do that in the blob page.
 But we can actually do that in our own site and use iframe to do that!
 
-{% note %}
 Usually, when user's current site and iframe's site isn't same-origin, you cannot access the attributes, objects, methods from the website in iframe.
 But there are few exceptions, and one is `postMessage`, since `postMessage` is exactly designed to do such things.
-{% endnote %}
-
 
 The full payload can be found in maple3142's github repo.
 
